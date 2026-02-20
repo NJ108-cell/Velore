@@ -1,0 +1,56 @@
+{
+  "name": "ModuleProgress",
+  "type": "object",
+  "properties": {
+    "module_id": {
+      "type": "string",
+      "description": "ID of the learning module"
+    },
+    "module_title": {
+      "type": "string",
+      "description": "Title of the module for reference"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed"
+      ],
+      "default": "not_started",
+      "description": "Current status"
+    },
+    "progress_percentage": {
+      "type": "number",
+      "default": 0,
+      "description": "Completion percentage (0-100)"
+    },
+    "time_spent_minutes": {
+      "type": "number",
+      "default": 0,
+      "description": "Time spent on this module"
+    },
+    "quiz_score": {
+      "type": "number",
+      "description": "Quiz score if applicable (0-100)"
+    },
+    "attempts": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of attempts"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When module was completed"
+    },
+    "notes": {
+      "type": "string",
+      "description": "User notes on this module"
+    }
+  },
+  "required": [
+    "module_id",
+    "module_title"
+  ]
+}

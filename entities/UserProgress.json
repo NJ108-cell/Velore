@@ -1,0 +1,83 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "selected_continent": {
+      "type": "string",
+      "description": "User's selected continent"
+    },
+    "selected_country": {
+      "type": "string",
+      "description": "User's selected country"
+    },
+    "selected_state": {
+      "type": "string",
+      "description": "User's selected state/province"
+    },
+    "selected_city": {
+      "type": "string",
+      "description": "User's selected city"
+    },
+    "vehicle_domain": {
+      "type": "string",
+      "enum": [
+        "land",
+        "air",
+        "water",
+        "underwater",
+        "space"
+      ],
+      "description": "Selected vehicle domain"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "description": "Specific vehicle type selected"
+    },
+    "purpose": {
+      "type": "string",
+      "enum": [
+        "personal",
+        "commercial",
+        "industrial",
+        "research",
+        "defense",
+        "emergency"
+      ],
+      "description": "Purpose of vehicle use"
+    },
+    "skill_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "description": "User's current skill level"
+    },
+    "current_phase": {
+      "type": "number",
+      "description": "Current learning phase (1-5)"
+    },
+    "completed_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of completed module IDs"
+    },
+    "certificates_earned": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of earned certificate IDs"
+    },
+    "total_learning_hours": {
+      "type": "number",
+      "description": "Total hours spent learning"
+    }
+  },
+  "required": [
+    "skill_level"
+  ]
+}

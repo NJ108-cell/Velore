@@ -1,0 +1,73 @@
+{
+  "name": "LearningModule",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Module title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Module description"
+    },
+    "phase": {
+      "type": "number",
+      "description": "Learning phase (1-5)"
+    },
+    "vehicle_domain": {
+      "type": "string",
+      "enum": [
+        "land",
+        "air",
+        "water",
+        "underwater",
+        "space",
+        "all"
+      ],
+      "description": "Applicable vehicle domain"
+    },
+    "vehicle_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Applicable vehicle types"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "expert"
+      ],
+      "description": "Difficulty level"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Estimated duration in minutes"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "theory",
+        "simulation",
+        "practical",
+        "assessment"
+      ],
+      "description": "Type of content"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name for the module"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order within phase"
+    }
+  },
+  "required": [
+    "title",
+    "phase",
+    "vehicle_domain"
+  ]
+}
